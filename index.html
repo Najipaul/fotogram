@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        <title>Document</title>
+    </head>
+    <body onload="render()">
+        <header><img src="./assets/Capa_1.svg" alt="Header Logo" /></header>
+        <main>
+            <div class="container">
+                <h1>Your personal photo album</h1>
+                <div class="gallery" id="content"></div>
+            </div>
+        </main>
+        <footer><img src="./assets/Frame.png" alt="Footer Logo" /></footer>
+        <dialog id="myDialog">
+            <header>
+                <h2 id="dialogTitle"></h2>
+                <button class="close-dialog" onclick="closeDialog()">×</button>
+            </header>
+            <section>
+                <img id="dialogImg" src="" alt="" />
+            </section>
+            <footer>
+                <button class="nav-left" onclick="prev()">←</button>
+                <span id="counter"></span>
+                <button class="nav-right" onclick="next()">→</button>
+            </footer>
+        </dialog>
+    </body>
+</html>

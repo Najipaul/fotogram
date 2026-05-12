@@ -1,0 +1,204 @@
+/* figtree-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/figtree-v9-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* figtree-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 800;
+    src: url("./assets/fonts/figtree-v9-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    height: 81px;
+    padding: 20px 120px;
+
+    background-color: rgba(255, 255, 255, 0.129);
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100dvh; */
+    background-color: rgba(6, 23, 30, 1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 160px max(120px, calc(50% - 770px));
+    gap: 30px;
+}
+
+
+
+
+h1 {
+    color: white;
+    font-family: "Figtree";
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    img {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 4px solid rgba(255, 255, 255, 0.129);
+        cursor: pointer;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 81px;
+    padding: 20px 140px;
+    background-color: rgba(255, 255, 255, 0.129);
+    width: 100%;
+    border-top-left-radius: 50% 40px;
+    border-top-right-radius: 50% 40px;
+}
+
+/* ---------------------------------------------------- */
+
+dialog {
+    background: rgba(6, 23, 30, 1);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 24px;
+    /* width: min(500px, ); */
+    height: 75dvh;
+    font-family: "Figtree";
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog header {
+    position: static;
+    background: transparent;
+    padding: 0 0 16px 0;
+    height: auto;
+    width: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+dialog header h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+dialog section {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+dialog section img {
+    width: 100%;
+    height: 50dvh;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+dialog footer {
+    position: static;
+    background: transparent;
+    padding: 16px 0 0 0;
+    height: auto;
+    width: auto;
+    border-radius: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.close-dialog {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-left,
+.nav-right {
+    background: #d62a3f;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+ /* ---------------------------------------------------- */
+
+ @media (max-width: 768px) {
+    header,
+    footer {
+        position: relative;
+    }
+    body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100dvh;
+        justify-content: flex-start;
+    }
+
+    header {
+        padding: 15px 20px;
+        height: 60px;
+    }
+    header img {
+        height: 30px;
+    }
+
+    .container {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 1.2;
+    }}
