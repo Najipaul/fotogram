@@ -31,14 +31,14 @@ const titles = [
 function render() {
     let contentRef = document.getElementById("content");
     contentRef.innerHTML = "";
-    
+
     for (let index = 0; index < images.length; index++) {
         contentRef.innerHTML += getImageHtml(index);
     }
 
     document.getElementById("myDialog").addEventListener("click", (e) => {
-    if (e.target.id === "myDialog") closeDialog();
-});
+        if (e.target.id === "myDialog") closeDialog();
+    });
 }
 
 function getImageHtml(i) {
@@ -62,11 +62,13 @@ function openModal(i) {
 function updateDialog() {
     document.getElementById("dialogImg").src = images[currentIndex];
     document.getElementById("dialogTitle").textContent = titles[currentIndex];
-    document.getElementById("counter").textContent = `${currentIndex + 1}/${images.length}`;
+    document.getElementById("counter").textContent =
+        `${currentIndex + 1}/${images.length}`;
 }
 
 function closeDialog() {
     document.getElementById("myDialog").close();
+    document.getElementById("dialogImg").src = "";
 }
 
 function next() {
@@ -79,6 +81,4 @@ function prev() {
     updateDialog();
 }
 
-
 // ---------------------------------------------------------
-
